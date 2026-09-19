@@ -1,0 +1,15 @@
+/home/hamburger/CSE-325/DotNetDebugging/bin/Release/net10.0/DotNetDebugging
+/home/hamburger/CSE-325/DotNetDebugging/bin/Release/net10.0/DotNetDebugging.deps.json
+/home/hamburger/CSE-325/DotNetDebugging/bin/Release/net10.0/DotNetDebugging.runtimeconfig.json
+/home/hamburger/CSE-325/DotNetDebugging/bin/Release/net10.0/DotNetDebugging.dll
+/home/hamburger/CSE-325/DotNetDebugging/bin/Release/net10.0/DotNetDebugging.pdb
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.GeneratedMSBuildEditorConfig.editorconfig
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.AssemblyInfoInputs.cache
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.AssemblyInfo.cs
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.csproj.CoreCompileInputs.cache
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.sourcelink.json
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.dll
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/refint/DotNetDebugging.dll
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.pdb
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/DotNetDebugging.genruntimeconfig.cache
+/home/hamburger/CSE-325/DotNetDebugging/obj/Release/net10.0/ref/DotNetDebugging.dll
