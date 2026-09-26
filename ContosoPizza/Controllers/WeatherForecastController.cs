@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc; //library is included for controllerbase and route and apicontroller
 
-namespace ContosoPizza.Controllers;
+namespace ContosoPizza.Controllers; //
 
 [ApiController]
 [Route("[controller]")]

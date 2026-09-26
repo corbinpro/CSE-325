@@ -1,0 +1,100 @@
+===============================
+Web API pizza service output with existing content and my additional pizza, using httprepl:
+===============================
+
+ httprepl http://localhost:5259
+(Disconnected)> connect http://localhost:5259
+Using a base address of http://localhost:5259/
+Using OpenAPI description at http://localhost:5259/swagger/v1/swagger.json
+For detailed tool info, see https://aka.ms/http-repl-doc
+
+http://localhost:5259/> ls
+.                 []
+Pizza             [GET]
+WeatherForecast   [GET]
+
+http://localhost:5259/> cd Pizza
+/Pizza    [GET]
+
+http://localhost:5259/Pizza> get
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Sat, 26 Sep 2026 22:35:19 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 3,
+    "name": "Meth Pizza",
+    "isGlutenFree": true
+  }
+]
+
+
+http://localhost:5259/Pizza> get 3
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Sat, 26 Sep 2026 22:35:23 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+{
+  "id": 3,
+  "name": "Meth Pizza",
+  "isGlutenFree": true
+}
+
+
+http://localhost:5259/Pizza> 
+
+
+===============================
+Sales summary function:
+===============================
+string SalesSummary(IEnumerable<string> salesFiles)
+{
+    double total = 0;
+    List<string> details = new List<string>();
+
+    foreach (var file in salesFiles)
+    {
+
+        //read contents of file
+        string salesJson = File.ReadAllText(file);
+        //parse contents as json 
+        SalesData? data = JsonConvert.DeserializeObject<SalesData?>(salesJson);
+        //add totals together in total var
+        total += data?.Total ?? 0;
+
+        //add file name and store total to list
+        details.Add($"{Path.GetRelativePath(storesDirectory, file)}: {data?.Total ?? 0}");
+    }
+
+    StringBuilder report = new();
+
+    report.AppendLine("Sales Summary");
+    report.AppendLine("----------------------------");
+    report.AppendLine($"Total Sales: {total:C}");
+    report.AppendLine();
+    report.AppendLine("Details:");
+
+    foreach (string detail in details)
+    {
+        report.AppendLine(detail);
+    }
+
+    return report.ToString();
+   }
+
+

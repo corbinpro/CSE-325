@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "C#: Contosopizza Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Contosopizza/Contosopizza.csproj"
+        },
+
+        {
             "name": "C#: mslearn-dotnet-files Debug",
             "type": "dotnet",
             "request": "launch",
