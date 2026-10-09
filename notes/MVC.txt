@@ -1,0 +1,20 @@
+MVC apps are based on 3 components architecturally:
+ 
+models
+views
+controllers
+
+Models are basically structure for a database or general application data and domain concepts, passing info, updating not usually creating database stuff. they are more flexible than just a database tool. You design and dictate data structure here. 
+
+views are the front end of the app
+
+controllers are the main controlling logic of the app, using the other two components to create the desired behavior. 
+
+flow of data:
+browser request hits program.cs and it routes user to controller
+
+user hits endpoint defined in the controller [site]/controller/method
+
+that controller pulls data using models and serves data to the views. 
+
+views (razor) are generated using the scaffolding defined in shared views layout files and the spesific view called by the controller.
